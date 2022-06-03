@@ -6,20 +6,7 @@ const leapYears = function(year) {
         return "ERROR";
     }
 
-    if (!(year % 4)) {
-        if (year % 100) {
-            return true;
-        }
-        else if (year % 400) {
-            return false;
-        }
-        else {
-            return true;
-        }
-    }
-    else {
-        return false;
-    }
+    return !(year % 4) ? (year % 100 || (!(year % 100) && !(year % 400)) ? true : false) : false;
 };
 
 // Do not edit below this line
